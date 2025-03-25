@@ -92,3 +92,72 @@ In this milestone, you'll learn how to create a **mongoose schema** for products
 ## 3. Validation
 - Ensure only valid data is saved, which helps maintain data integrity and prevent errors.
 
+# Milestone 11
+
+In Milestone 11, I focused on implementing functionality to send and receive product data between the backend and frontend of my e-commerce project. On the backend, I created an API endpoint that retrieves all products from MongoDB, sending the data to the frontend in JSON format. On the frontend, I created a function to fetch the product data and display it dynamically using a previously created product card component. This milestone helped me understand how to handle data transfer between the backend and frontend and how to display dynamic content using React components.
+
+
+# Milestone 12
+
+In Milestone 12, I focused on filtering product data based on the user’s email and displaying it dynamically on the frontend. On the backend, I created an API endpoint that retrieves products from MongoDB based on a specific user email. On the frontend, I developed a function to fetch the filtered data and displayed it using the previously created product card component. This milestone helped me understand how to filter data with specific constraints and pass it to the client for dynamic rendering, improving how user-specific product information is handled and shown.
+
+# Milestone 13
+
+Updating Existing Data in MongoDB
+- Create a PUT or PATCH API endpoint using Express.js.
+- Use Mongoose to find and update the document by its ID.
+- Ensure validation and error handling for a smooth update process.
+
+# Milestone 14
+Deleting Data from MongoDB
+- Create a DELETE API endpoint using Express.js.
+- Use Mongoose to find and delete the document by its ID.
+- Ensure validation and error handling for a smooth deletion process.
+
+# Milestone 15
+
+In Milestone 15, you will learn how to create a reusable Nav component and integrate it across multiple pages, including Home, My Products, Add Product, and Cart. The focus will be on ensuring smooth navigation and making the navbar fully responsive for all screen sizes. By completing this milestone, you will gain a deeper understanding of component reusability and navigation in web applications, improving both user experience and maintainability. 🚀
+
+# Milestone 16
+
+In this milestone, you will create a new page to display detailed information for each product, including an option to adjust quantity and an "Add to Cart" button. This will enhance the user experience by allowing better product interaction. Once completed, push your code to a public GitHub repository, update the README with your progress, and submit the repository link as required. 
+
+# Milestone 17:
+In this milestone, we designed the cart schema to store product details in a user's cart, including product ID, name, quantity, price, and total. The schema also tracks the total amount for the cart and associates the cart with a specific user.
+
+# Milestone 18: 
+In this milestone, we created a **GET `/cart`** endpoint to fetch the user's cart details, including product information and total amount. The endpoint ensures that only authenticated users can access their cart and retrieves the cart data from the database.
+
+# Milestone 19: Cart Functionality 🛒
+Learning Goals 🎯
+By the end of this milestone, you will be able to:
+Create a cart page that displays products using the endpoint built in Milestone 18.
+Implement + and - buttons to adjust product quantity.
+Develop backend endpoints to handle quantity updates.
+
+# Milestone 20:
+In Milestone 20, you will focus on building a user profile page that displays essential user information. This involves creating a backend endpoint to send all user data via email and a frontend profile page to display the retrieved data. The profile page will include sections for the user's photo, name, and email, along with a dedicated section for addresses. If addresses exist, they will be displayed with an "Add Address" button for adding new ones. If no addresses are found, a message stating "No address found" will be shown. This milestone will enhance your understanding of user data management and frontend-backend integration. 🚀
+
+# Milestone 21:
+In this milestone, you will develop a frontend form to capture user addresses, including country, city, address lines, zip code, and address type. You will implement state management to store the entered address details and ensure smooth navigation from the user profile page to the address form when the "Add Address" button is clicked. This milestone focuses on enhancing user experience by providing a structured and interactive way to input and manage address information. 🚀
+
+# Milestone 22:
+In Milestone 22, you will develop an API endpoint to receive address data submitted from the frontend address form. This endpoint will process the received address details and add them to the addresses array inside the user's collection in the database. By implementing this, you will gain a deeper understanding of how to handle data submission, update user records, and manage arrays within a database. This milestone is essential for enhancing backend development skills, particularly in handling API requests and modifying stored user data efficiently. 🚀
+
+# Milestone 23:
+Milestone 23 focuses on implementing the order placement flow. A "Place Order" button will be added to the cart page, which, when clicked, navigates to the "Select Address" page. This page will display all available addresses associated with the user, allowing them to choose one. A backend endpoint will be created to retrieve and send all user addresses to the frontend, ensuring seamless address selection before order confirmation.
+
+# Milestone 24:
+The Order Summary page will provide users with a clear overview of their purchase before finalizing the order. It will display all the products being ordered, including their details such as name, quantity, and price. Below the product list, the selected delivery address will be shown to ensure the user reviews it before proceeding. The total cart value will also be displayed, giving a complete cost breakdown. At the bottom of the page, a "Place Order" button will be available, allowing the user to confirm and complete their purchase seamlessly.
+
+# Milestone 25:
+This endpoint allows users to place orders by sending product details, user information, and address details. The system retrieves the user's _id using their email and processes each product as a separate order while maintaining the same address. Each order is stored in the MongoDB orders collection using the previously defined Order schema. This ensures that every product is tracked as an independent order while linking all orders to the same user and delivery address.
+
+# Milestone 26:
+This endpoint allows retrieval of a user's order history using their email address. When a request is made, the server first searches for the user's _id based on the provided email. Once the _id is obtained, it queries the database to fetch all orders associated with that user. The response includes the complete list of orders, enabling seamless tracking of purchase history. This functionality ensures efficient data retrieval while maintaining a user-friendly experience.
+
+# Milestone 27:
+Milestone 27 focuses on implementing the My Orders page in the e-commerce project. This involves sending a GET request to the /my-orders endpoint, where the user's email is passed to retrieve all their orders from the database. The fetched orders will then be displayed dynamically on the My Orders page, ensuring users can easily view their purchase history. Additionally, a navigation link to this page will be added to the navbar for better accessibility. This update enhances the user experience by providing a dedicated section for order tracking and management.
+
+# Milestone 28:
+Milestone 28 enhances the **My Orders** page by adding a **Cancel Order** button for each active order. This button will allow users to cancel an order if it has not already been canceled. If an order is already marked as canceled, the button will not be displayed. To achieve this, a new **API endpoint** will be created to handle order cancellations. When a user clicks the cancel button, the order **ID** will be sent to this endpoint, which will retrieve the order, update its status to **canceled**, and save the changes. This feature improves order management and gives users more control over their purchases.
